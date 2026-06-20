@@ -70,6 +70,10 @@ export default function HomeScreen() {
         'https://api.sampleapis.com/coffee/hot'
       );
 
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
       const data = await response.json();
 
       const menu = [
@@ -112,10 +116,14 @@ export default function HomeScreen() {
 
       setCoffeeItems(menu);
     } catch (error) {
+      console.log(error);
       setError(
         'Unable to load menu. Check your internet connection.'
       );
     } finally {
+      await new Promise((resolve) =>
+        setTimeout(resolve, 2000)
+      );
       setLoading(false);
     }
   };
@@ -195,6 +203,9 @@ export default function HomeScreen() {
                   <Text
                     style={{
                       fontSize: 24,
+                      color: favorites.includes(item.id)
+                        ? '#24382B'
+                        : '#D8CDB8',
                     }}
                   >
                     {favorites.includes(
