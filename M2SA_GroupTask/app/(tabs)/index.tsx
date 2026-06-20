@@ -8,7 +8,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 
 export default function HomeScreen() {
@@ -160,14 +160,14 @@ export default function HomeScreen() {
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.title}>
-            NOIR POST
+            Terra
           </Text>
           <Text style={styles.title}>
-            CAFIESTA
+            Mori
           </Text>
 
           <Text style={styles.subtitle}>
-            GOOD COFFEE. GOOD MOOD.
+            Cafe Bar.
           </Text>
         </View>
 

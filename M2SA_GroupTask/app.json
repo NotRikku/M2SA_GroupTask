@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "M2SA_GroupTask",
+    "name": "Terra Mori",
     "slug": "M2SA_GroupTask",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/Terra Mori.png",
     "scheme": "m2sagrouptask",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -19,7 +19,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.M2SA_GroupTask"
     },
     "web": {
       "output": "static",
@@ -30,12 +31,12 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/Terra Mori.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#F7F0E4",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#F7F0E4"
           }
         }
       ]

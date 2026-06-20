@@ -1,28 +1,26 @@
+import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-
-const COLORS = {
-  green: '#24382B',
-  cream: '#F7F0E4',
-  muted: '#8A7D68',
-};
 
 export default function Layout() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: COLORS.green,
-        tabBarInactiveTintColor: COLORS.muted,
+
         tabBarStyle: {
-          backgroundColor: COLORS.cream,
-          borderTopColor: '#D8CDB8',
-          height: 65,
+          backgroundColor: '#24382B',
+          borderTopWidth: 0,
+          height: 90,
           paddingBottom: 8,
           paddingTop: 8,
         },
+
+        tabBarActiveTintColor: '#F7F0E4',
+        tabBarInactiveTintColor: '#F7F0E4',
+
         tabBarLabelStyle: {
-          fontSize: 12,
           fontWeight: '700',
+          fontSize: 12,
         },
       }}
     >
@@ -30,6 +28,13 @@ export default function Layout() {
         name="index"
         options={{
           title: 'Menu',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name="cafe-outline"
+              size={size}
+              color={color}
+            />
+          ),
         }}
       />
 
@@ -37,6 +42,13 @@ export default function Layout() {
         name="explore"
         options={{
           title: 'Cart',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name="cart-outline"
+              size={size}
+              color={color}
+            />
+          ),
         }}
       />
 
@@ -44,6 +56,13 @@ export default function Layout() {
         name="profile"
         options={{
           title: 'Profile',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name="person-outline"
+              size={size}
+              color={color}
+            />
+          ),
         }}
       />
 
