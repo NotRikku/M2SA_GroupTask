@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {
-  View,
+  Keyboard,
+  SafeAreaView,
+  StyleSheet,
   Text,
   TextInput,
-  StyleSheet,
   TouchableOpacity,
-  SafeAreaView,
+  View
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -20,7 +21,6 @@ export default function CartScreen() {
   const loadNote = async () => {
     try {
       const savedNote = await AsyncStorage.getItem('cartNote');
-
       if (savedNote) {
         setNote(savedNote);
       }
@@ -32,6 +32,7 @@ export default function CartScreen() {
   const saveNote = async () => {
     try {
       await AsyncStorage.setItem('cartNote', note);
+      Keyboard.dismiss();
       alert('Note saved!');
     } catch (error) {
       console.log(error);
